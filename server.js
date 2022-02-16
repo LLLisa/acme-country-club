@@ -24,7 +24,7 @@ const Facility = db.define('facility', {
 const Booking = db.define('booking', {
   id: {
     type: UUID,
-    primaryKey: true,hvg
+    primaryKey: true,
     defaultValue: UUIDV4,
   },
   bookerId: {
