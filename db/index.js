@@ -1,6 +1,8 @@
 //db setup--------------------------------------
 const Sequelize = require('sequelize');
-const db = new Sequelize('postgres://localhost/acme_country_club');
+const db = new Sequelize(
+  process.env.DATABASE_URL || 'postgres://localhost/acme_country_club'
+);
 const { STRING, UUID, UUIDV4 } = Sequelize;
 
 const Member = db.define('member', {
